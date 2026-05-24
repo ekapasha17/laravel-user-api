@@ -1,0 +1,107 @@
+{
+  "info": {
+    "_postman_id": "07bca27e-4d58-4e5b-ac03-4f82275be836",
+    "name": "CheckProof",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1619681"
+  },
+  "item": [
+    {
+      "name": "Create user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"eka@test.com\",\r\n  \"password\": \"secret123\",\r\n  \"name\": \"eka test\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/api/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve user",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer buuxhrm7P3gyCmU8Z80mknXR5Q47cJJAAQWLUmJx310a8392",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "localhost:8000/api/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "sortBy",
+              "value": "name",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "sortBy",
+              "value": "email",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "page",
+              "value": "1",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "search",
+              "value": "John",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
